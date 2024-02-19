@@ -1,0 +1,107 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media screen and (max-width:768px) {
+    header {
+        margin: auto 12px;
+    }
+
+    header>nav>.burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger.active .stik:nth-child(2) {
+        opacity: 0px;
+    }
+
+    .burger.active .stik:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger.active .stik:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        -moz-transform: translateY(-8px) rotate(-45deg);
+        -ms-transform: translateY(-8px) rotate(-45deg);
+        -o-transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media screen and (min-width:769px) {
+    header {
+        margin: auto 50px;
+    }
+
+
+}
+
+@media screen and (min-width:1000px) {
+    header {
+        margin: auto 150px;
+    }
+
+
+}
+
+body {
+    margin: 0px;
+    background: linear-gradient(to top, rgba(17, 24, 39, 1) 0%, rgba(55, 65, 81, 1) 100%);
+    height: 100vh;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    font-size: 12px;
+    column-gap: 8px;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    padding: 8px 14px;
+    color: white;
+    background-color: #4b5563bb;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.burger {
+    display: none;
+}
+
+.stik {
+    width: 28px;
+    display: block;
+    margin: 5px auto;
+    height: 2px;
+    background-color: #667282;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link{
+    display: flex;
+    gap: 24px;
+
+}
+.nav-link a{
+    text-decoration: none;
+    color: aliceblue;
+}
