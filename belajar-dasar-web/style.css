@@ -1,15 +1,32 @@
 * {
+    /* border: 1px solid #eee; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 @media screen and (max-width:768px) {
-    header {
-        margin: auto 12px;
+
+    header,
+    main {
+        margin: auto 24px;
+    }
+
+    input {
+        display: none;
     }
 
     header>nav>.burger {
         display: block;
         cursor: pointer;
+    }
+
+    .nav-link {
+        position: absolute;
+        flex-direction: column;
+        top: 0px;
+        left: -190px;
+        background-color: blue;
+        height: 100vh;
+        padding: 90px 50px;
     }
 
     .burger.active .stik:nth-child(2) {
@@ -27,19 +44,51 @@
         -ms-transform: translateY(-8px) rotate(-45deg);
         -o-transform: translateY(-8px) rotate(-45deg);
     }
+
+    /* main */
+    main {
+        margin-top: 20px;
+    }
+
+   
 }
 
 @media screen and (min-width:769px) {
-    header {
+    header,main {
         margin: auto 50px;
     }
 
+    .search {
+        display: flex;
+        column-gap: 12px;
+        color: #667282;
+        padding: 12px 40px 12px 20px;
+        background-color: #192738;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
 
 }
 
 @media screen and (min-width:1000px) {
-    header {
+    header,main {
         margin: auto 150px;
+    }
+
+    .search {
+        display: flex;
+        column-gap: 12px;
+        color: #667282;
+        padding: 12px 40px 12px 20px;
+        background-color: #192738;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
     }
 
 
@@ -96,12 +145,31 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
-.nav-link{
+.nav-link {
     display: flex;
     gap: 24px;
 
 }
-.nav-link a{
+
+.nav-link a {
     text-decoration: none;
     color: aliceblue;
+}
+
+.search img,
+p {
+    margin: 0px;
+}
+
+input {
+    background: none;
+    border: none;
+    width: 70px;
+
+}
+
+
+article img {
+    max-width: 100%;
+    object-fit: cover;
 }
