@@ -3,6 +3,8 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* mobile */
+
 @media screen and (max-width:768px) {
 
     header,
@@ -33,10 +35,10 @@
         left: 0;
     }
 
-    .burger.active{
+    .burger.active {
         position: absolute;
         z-index: 100;
-        margin-left:100px ;
+        margin-left: 100px;
     }
 
     .burger.active .stik:nth-child(2) {
@@ -58,13 +60,20 @@
     }
 
     /* main */
-    main {
-        margin-top: 20px;
+  
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
     }
+
 
 
 }
 
+/* tablet */
 @media screen and (min-width:769px) {
 
     header,
@@ -85,8 +94,15 @@
         -o-border-radius: 50px;
     }
 
+    .main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
 }
 
+/* desktop */
 @media screen and (min-width:1000px) {
 
     header,
@@ -107,13 +123,18 @@
         -o-border-radius: 50px;
     }
 
+    .main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
 
 }
 
 body {
     margin: 0px;
     background: linear-gradient(to top, rgba(17, 24, 39, 1) 0%, rgba(55, 65, 81, 1) 100%);
-    height: 100vh;
 }
 
 
@@ -189,8 +210,54 @@ input {
 
 }
 
+/* main */
+main {
+    margin-top: 30px;
+}
 
-article img {
+img {
     max-width: 100%;
     object-fit: cover;
+}
+
+.time {
+    color: #667282;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    font-size: 12px;
+}
+
+.titlle h1 {
+    font-size: 24px;
+    color: white;
+    margin: 20px auto ;
+}
+figcaption{
+color: #667282;   
+line-height: 28px;
+}
+
+.user img{
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-top: 20px;
+}
+.user h6{
+    margin: 0px;
+    color: rgba(240, 248, 255, 0.626);
+    font-size: 16px;
+}
+.user p{
+    color: rgba(240, 248, 255, 0.361);
+    margin-top: 4px;
+    font-size: 12px;
 }
