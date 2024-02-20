@@ -143,6 +143,7 @@ header {
 
 /* buku */
 .item {
+    margin-bottom: 12px;
     border: 1px solid gray;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -201,13 +202,14 @@ footer {
     padding: 10px;
 }
 
-.submit{
-    transition: all 0.3s  ease-in-out;
-    -webkit-transition: all 0.3s  ease-in-out;
-    -moz-transition: all 0.3s  ease-in-out;
-    -ms-transition: all 0.3s  ease-in-out;
-    -o-transition: all 0.3s  ease-in-out;
+.submit {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
-.submit:active{
+
+.submit:active {
     background-color: blue;
 }
