@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>Booksefl Apps</h1>
+      <h1>Bookself Apps</h1>
     </header>
     <main>
       <section class="input">
@@ -16,25 +16,25 @@
         <form>
           <div>
             <label>Judul</label>
-            <input type="text" />
+            <input id="judul" type="text" />
           </div>
           <div>
             <label>Penulis</label>
-            <input type="text" />
+            <input id="autor" type="text" />
           </div>
           <div>
             <label>Tahun</label>
-            <input type="number" />
+            <input id="year" type="number" />
           </div>
           <div class="check">
-            <input type="checkbox" />
+            <input id="check" type="checkbox" />
             <label>Selesai dibaca</label>
           </div>
 
-          <button>Masukan ke rak <b>belum selesai dibaca</b></button>
+          <button class="submit" type="button" onclick="addBook()">Masukan ke rak <b>belum selesai dibaca</b></button>
         </form>
       </section>
-      <section  class="cari">
+      <section class="cari">
         <h1>Cari Buku</h1>
         <div>
           <label> judul</label>
@@ -45,9 +45,27 @@
       <section class="done">
         <h1>Selesai Dibaca</h1>
       </section>
-      <section class="dont">
+      <section id="dont" class="dont">
         <h1>Belum Dibaca</h1>
+        
+        <!-- <div class="item">
+        <div>
+            <h2 class="title">buku</h2>
+          <div class="about">
+          <p class="autor">autor</p>
+          <p class="year">autor</p>
+          </div>
+        </div>
+          <div class="button">
+            <button class="sudah">sudah</button>
+            <button class="hapus">hapus</button>
+          </div>
+        </div> -->
       </section>
     </main>
+    <footer>
+        <p>copyright design by howlil</p>
+    </footer>
+    <script src="index.js"></script>
   </body>
 </html>

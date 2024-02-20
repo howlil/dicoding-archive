@@ -1,5 +1,30 @@
 * {
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width:678px) {
+    main {
+        margin: 24px;
+    }
+
+
+
+}
+
+@media screen and (min-width:679px) {
+    main {
+        margin: 50px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    main {
+        margin: 50px 350px;
+    }
+
+
+
 }
 
 body {
@@ -18,9 +43,7 @@ header {
     background-color: rgb(77, 77, 214);
 }
 
-main {
-    margin: 20px 50px;
-}
+
 
 /* content */
 
@@ -28,15 +51,14 @@ main {
 .cari,
 .done,
 .dont {
-
     margin-top: 12px;
-    border: 1px solid rgba(128, 128, 128, 0.536);
-    padding: 24px;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+    box-shadow: 0px 2px 16px rgba(128, 128, 128, 0.235);
+    padding: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .input h1,
@@ -58,8 +80,10 @@ main {
 
 }
 
-.input input , .cari input {
-    padding: 5px 12px;
+.input input,
+.cari input {
+    padding: 8px 12px;
+    border: 1px solid gray;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -67,8 +91,9 @@ main {
     -o-border-radius: 4px;
 }
 
-.input label, .cari label {
-    font-size: 14px;
+.input label,
+.cari label {
+    font-size: 16px;
     font-weight: 600;
     color: rgb(77, 77, 214);
 }
@@ -76,12 +101,13 @@ main {
 .input .check {
     flex-direction: row;
 }
-.input button{
+
+.input button {
     width: 100%;
     border: none;
     background-color: rgb(77, 77, 214);
-    padding: 8px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 14px;
     color: white;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -89,27 +115,23 @@ main {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
 }
-/* 
-.cari{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: ;
-} */
-.cari div{
+
+.cari div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
-.cari input{
+
+.cari input {
     width: 100%;
 }
-.cari button{
+
+.cari button {
     border: none;
     width: 20%;
-    padding: 8px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 16px;
     color: white;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -117,4 +139,75 @@ main {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     background-color: rgb(77, 77, 214);
+}
+
+/* buku */
+.item {
+    border: 1px solid gray;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+h2,
+p {
+    margin: 0px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.about {
+    display: flex;
+    gap: 12px;
+    color: gray;
+}
+
+.button {
+    display: flex;
+    gap: 6px;
+}
+
+.button button {
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.sudah {
+    background-color: rgb(77, 77, 214);
+}
+
+.hapus {
+    background-color: salmon;
+}
+
+footer {
+    text-align: center;
+    color: rgba(77, 77, 214, 0.65);
+    padding: 10px;
+}
+
+.submit{
+    transition: all 0.3s  ease-in-out;
+    -webkit-transition: all 0.3s  ease-in-out;
+    -moz-transition: all 0.3s  ease-in-out;
+    -ms-transition: all 0.3s  ease-in-out;
+    -o-transition: all 0.3s  ease-in-out;
+}
+.submit:active{
+    background-color: blue;
 }
