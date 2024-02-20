@@ -19,25 +19,37 @@
         cursor: pointer;
     }
 
-    .nav-link {
+    .nav-menu {
         position: absolute;
         flex-direction: column;
         top: 0px;
         left: -190px;
-        background-color: blue;
+        background-color: #667282;
         height: 100vh;
         padding: 90px 50px;
     }
 
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .burger.active{
+        position: absolute;
+        z-index: 100;
+        margin-left:100px ;
+    }
+
     .burger.active .stik:nth-child(2) {
-        opacity: 0px;
+        opacity: 0;
     }
 
     .burger.active .stik:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
+        background-color: black;
     }
 
     .burger.active .stik:nth-child(3) {
+        background-color: black;
         transform: translateY(-8px) rotate(-45deg);
         -webkit-transform: translateY(-8px) rotate(-45deg);
         -moz-transform: translateY(-8px) rotate(-45deg);
@@ -50,11 +62,13 @@
         margin-top: 20px;
     }
 
-   
+
 }
 
 @media screen and (min-width:769px) {
-    header,main {
+
+    header,
+    main {
         margin: auto 50px;
     }
 
@@ -74,7 +88,9 @@
 }
 
 @media screen and (min-width:1000px) {
-    header,main {
+
+    header,
+    main {
         margin: auto 150px;
     }
 
@@ -128,13 +144,16 @@ nav {
 
 .burger {
     display: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
 }
 
 .stik {
-    width: 28px;
+    width: 25px;
     display: block;
     margin: 5px auto;
-    height: 2px;
+    height: 3px;
     background-color: #667282;
     border-radius: 50px;
     -webkit-border-radius: 50px;
@@ -145,13 +164,15 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
-.nav-link {
+.nav-menu {
     display: flex;
     gap: 24px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
 }
 
-.nav-link a {
+.nav-menu a {
     text-decoration: none;
     color: aliceblue;
 }
