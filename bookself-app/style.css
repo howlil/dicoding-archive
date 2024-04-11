@@ -1,13 +1,13 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid salmon; */
 }
 
 @media screen and (max-width:678px) {
     main {
         margin: 24px;
     }
-
 
 
 }
@@ -43,9 +43,6 @@ header {
     background-color: rgb(77, 77, 214);
 }
 
-
-
-/* content */
 
 .input,
 .cari,
@@ -141,7 +138,6 @@ header {
     background-color: rgb(77, 77, 214);
 }
 
-/* buku */
 .item {
     margin-bottom: 12px;
     border: 1px solid gray;
@@ -156,13 +152,13 @@ header {
     padding: 12px;
 }
 
-h2,
+h3,
 p {
     margin: 0px;
 }
 
-h2 {
-    font-size: 20px;
+h3 {
+    font-size: 16px;
 }
 
 .about {
@@ -212,4 +208,53 @@ footer {
 
 .submit:active {
     background-color: blue;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.586);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    text-align: center;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+
+.modal-content h4 {
+    margin: 0 ;
+    color: rgb(31, 31, 187) ;
+
+}
+.modal-content p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.modal-content button {
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+}
+.btnly{
+    display: flex;
+    gap: 8px;
 }

@@ -13,7 +13,7 @@
     <main>
       <section class="input">
         <h1>Masukkan Buku Baru</h1>
-        <form>
+        <form >
           <div>
             <label>Judul</label>
             <input id="judul" type="text" />
@@ -31,7 +31,7 @@
             <label>Selesai dibaca</label>
           </div>
 
-          <button class="submit" type="button" onclick="addBook()">
+          <button class="submit" type="button" id="submit">
             Masukan ke rak <b>belum selesai dibaca</b>
           </button>
         </form>
@@ -39,35 +39,40 @@
       <section class="cari">
         <h1>Cari Buku</h1>
         <div>
-          <label> judul</label>
-          <input type="text" name="" id="" />
-          <button>cari</button>
+          <label for="searchInput">Judul</label>
+          <input type="text" id="searchInput" />
+          <button id="searchButton">Cari</button>
         </div>
       </section>
+
       <section id="done" class="done">
         <h1>Selesai Dibaca</h1>
+        <div id="wrapdone">
+
+        </div>
       </section>
       <section id="dont" class="dont">
         <h1>Belum Dibaca</h1>
+        <div id="wrapdont">
 
-        <!-- <div class="item">
-        <div>
-            <h2 class="title">buku</h2>
-          <div class="about">
-          <p class="autor">autor</p>
-          <p class="year">autor</p>
-          </div>
         </div>
-          <div class="button">
-            <button class="sudah">sudah</button>
-            <button class="hapus">hapus</button>
-          </div>
-        </div> -->
       </section>
+
     </main>
     <footer>
       <p>copyright design by howlil</p>
     </footer>
+    <div id="deleteModal" class="modal">
+      <div class="modal-content">
+          <h4>Konfirmasi hapus</h4>
+          <p>Kamu Yakin Mau Hapus?</p>
+          <div class="btnly">
+            <button class="input hapus" id="confirmDelete">hapus</button>
+            <button class="input sudah" id="cancelDelete">batal</button>
+          </div>
+      </div>
+    </div>
+  
     <script src="index.js"></script>
   </body>
 </html>
